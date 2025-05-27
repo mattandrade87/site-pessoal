@@ -3,11 +3,18 @@ const ctx = canvas.getContext("2d");
 
 let width = window.innerWidth;
 let height = window.innerHeight;
-let particles = [];
-const PARTICLE_COUNT = Math.floor((width * height) / 1200); // Ajuste para densidade
-const WAVE_AMPLITUDE = 24; // Amplitude da onda
-const WAVE_LENGTH = 180; // Comprimento da onda
-const WAVE_SPEED = 0.8; // Velocidade da onda
+
+// Configurações da animação
+const LINE_COUNT = 20; // Número de linhas horizontais
+const POINTS_PER_LINE = 80; // Pontos por linha
+const NOISE_SCALE = 0.005; // Escala do ruído Perlin
+const NOISE_SPEED = 0.0015; // Velocidade da animação
+const AMPLITUDE = 40; // Amplitude das ondas
+const POINT_RADIUS = 1.5; // Tamanho dos pontos
+const START_HEIGHT = 0.5; // Começa na metade da tela (50%)
+
+// Criar instância do Simplex Noise
+const simplex = new SimplexNoise();
 
 function resizeCanvas() {
   width = window.innerWidth;
@@ -16,64 +23,48 @@ function resizeCanvas() {
   canvas.height = height;
 }
 
-window.addEventListener("resize", () => {
-  resizeCanvas();
-  createParticles();
-});
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
 
-function createParticles() {
-  particles = [];
-  const count = Math.floor((width * height) / 1200);
-  for (let i = 0; i < count; i++) {
-    // Distribuição em "grid" para onda mais visível
-    const cols = Math.floor(width / 32);
-    const x = (i % cols) * (width / cols) + Math.random() * 8;
-    const y = Math.floor(i / cols) * 28 + Math.random() * 8;
-    particles.push({
-      baseX: x,
-      baseY: y,
-      x: x,
-      y: y,
-      r: Math.random() * 1.2 + 0.4,
-      dx: (Math.random() - 0.5) * 0.2,
-      dy: (Math.random() - 0.5) * 0.2,
-      alpha: Math.random() * 0.5 + 0.5,
-      phase: Math.random() * Math.PI * 2,
-    });
-  }
-}
+let time = 0;
 
-let startTime = null;
-function animate(ts) {
-  if (!startTime) startTime = ts;
-  const t = (ts - startTime) / 1000;
+function animate() {
   ctx.clearRect(0, 0, width, height);
-  for (let p of particles) {
-    // Movimento de onda senoidal (vertical)
-    p.y =
-      p.baseY +
-      Math.sin(p.baseX / WAVE_LENGTH + t * WAVE_SPEED + p.phase) *
-        WAVE_AMPLITUDE;
-    // Movimento individual leve
-    p.x += p.dx;
-    p.baseY += p.dy;
-    // Rebote nas bordas
-    if (p.x < 0 || p.x > width) p.dx *= -1;
-    if (p.baseY < 0 || p.baseY > height) p.dy *= -1;
 
-    ctx.save();
-    ctx.globalAlpha = p.alpha;
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
-    ctx.fillStyle = "#e53935";
-    ctx.shadowColor = "#e53935";
-    ctx.shadowBlur = 8;
-    ctx.fill();
-    ctx.restore();
+  // Desenhar linhas de pontos
+  for (let line = 0; line < LINE_COUNT; line++) {
+    // Calcular a posição base Y começando da metade da tela
+    const yBase =
+      height * START_HEIGHT +
+      (line / LINE_COUNT) * (height * (1 - START_HEIGHT));
+
+    for (let i = 0; i < POINTS_PER_LINE; i++) {
+      const x = (i / POINTS_PER_LINE) * width;
+
+      // Usar Perlin Noise para gerar o deslocamento vertical
+      const noise = simplex.noise3D(x * NOISE_SCALE, yBase * NOISE_SCALE, time);
+
+      // Aplicar o deslocamento com amplitude
+      const y = yBase + noise * AMPLITUDE;
+
+      // Desenhar o ponto
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(x, y, POINT_RADIUS, 0, Math.PI * 2);
+      ctx.fillStyle = "red";
+      ctx.shadowColor = "red";
+      ctx.shadowBlur = 4;
+      ctx.globalAlpha = 0.8;
+      ctx.fill();
+      ctx.restore();
+    }
   }
+
+  // Incrementar o tempo para a animação
+  time += NOISE_SPEED;
+
   requestAnimationFrame(animate);
 }
 
-resizeCanvas();
-createParticles();
-requestAnimationFrame(animate);
+// Iniciar a animação
+animate();
