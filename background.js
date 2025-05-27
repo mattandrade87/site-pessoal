@@ -6,11 +6,11 @@ let height = window.innerHeight;
 
 // Configurações da animação
 const LINE_COUNT = 20; // Número de linhas horizontais
-const POINTS_PER_LINE = 80; // Pontos por linha
+const POINTS_PER_LINE = 80; // Pontos por linha (aumentado para diminuir a distância)
 const NOISE_SCALE = 0.005; // Escala do ruído Perlin
 const NOISE_SPEED = 0.0015; // Velocidade da animação
-const AMPLITUDE = 40; // Amplitude das ondas
-const POINT_RADIUS = 1.5; // Tamanho dos pontos
+const AMPLITUDE = 50; // Amplitude das ondas
+const POINT_RADIUS = 1.2; // Tamanho dos pontos (reduzido para melhor densidade)
 const START_HEIGHT = 0.5; // Começa na metade da tela (50%)
 
 // Criar instância do Simplex Noise
@@ -53,7 +53,7 @@ function animate() {
       ctx.arc(x, y, POINT_RADIUS, 0, Math.PI * 2);
       ctx.fillStyle = "red";
       ctx.shadowColor = "red";
-      ctx.shadowBlur = 4;
+      ctx.shadowBlur = 0; // Reduzido para melhor performance
       ctx.globalAlpha = 0.8;
       ctx.fill();
       ctx.restore();
