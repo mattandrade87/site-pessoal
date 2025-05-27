@@ -8,10 +8,11 @@ let height = window.innerHeight;
 const LINE_COUNT = 20; // Número de linhas horizontais
 const POINTS_PER_LINE = 80; // Pontos por linha (aumentado para diminuir a distância)
 const NOISE_SCALE = 0.005; // Escala do ruído Perlin
-const NOISE_SPEED = 0.0015; // Velocidade da animação
-const AMPLITUDE = 50; // Amplitude das ondas
+const NOISE_SPEED = 0.002; // Velocidade da animação
+const AMPLITUDE = 80; // Amplitude das ondas
 const POINT_RADIUS = 1.2; // Tamanho dos pontos (reduzido para melhor densidade)
-const START_HEIGHT = 0.5; // Começa na metade da tela (50%)
+const START_HEIGHT = 0.3; // Começa na metade da tela (50%)
+const END_HEIGHT = 0.7; // Termina na metade da tela (50%)
 
 // Criar instância do Simplex Noise
 const simplex = new SimplexNoise();
@@ -36,7 +37,7 @@ function animate() {
     // Calcular a posição base Y começando da metade da tela
     const yBase =
       height * START_HEIGHT +
-      (line / LINE_COUNT) * (height * (1 - START_HEIGHT));
+      (line / LINE_COUNT) * (height * (END_HEIGHT - START_HEIGHT));
 
     for (let i = 0; i < POINTS_PER_LINE; i++) {
       const x = (i / POINTS_PER_LINE) * width;
