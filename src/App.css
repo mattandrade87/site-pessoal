@@ -36,7 +36,7 @@ header {
   display: block;
   pointer-events: none;
 }
-
+/* 
 .content {
   position: absolute;
   top: 20%;
@@ -106,4 +106,4 @@ h1 {
   .content {
     padding: 0 0.5rem;
   }
-}
+} */

@@ -18,7 +18,7 @@ const AnimatedBackground: React.FC = () => {
     let height: number = window.innerHeight;
 
     // Configurações da animação
-    const LINE_COUNT = 20;
+    const LINE_COUNT = 25;
     const POINTS_PER_LINE = 80;
     const NOISE_SCALE = 0.005;
     const NOISE_SPEED = 0.002;
@@ -68,7 +68,7 @@ const AnimatedBackground: React.FC = () => {
           ctx.save();
           ctx.beginPath();
           ctx.arc(x, y, POINT_RADIUS, 0, Math.PI * 2);
-          ctx.fillStyle = "red";
+          ctx.fillStyle = "#d2b48c";
           ctx.shadowColor = "red";
           ctx.shadowBlur = 0;
           ctx.globalAlpha = 0.8;
