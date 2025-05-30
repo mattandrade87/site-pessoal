@@ -1,1 +1,9 @@
+@import "./App.css";
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #fff5e1;
+  --color-secondary: #caa472;
+  --color-icons: #ffffff;
+  --color-background-animation: #d2b48c;
+}

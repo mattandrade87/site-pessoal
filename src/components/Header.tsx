@@ -1,13 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import colors from "../styles/colors";
 
 const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black h-8">
       <div className="flex justify-end gap-6 ">
-        <button className={`text-[${colors.primary}] text-2xl`}>
+        <button
+          className={`text-primary text-2xl hover:underline tracking-normal`}
+        >
           About me
         </button>
         <a
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
         >
           <FontAwesomeIcon
             icon={faLinkedin}
-            className={`text-[${colors.primary}] text-4xl hover:text-blue-500 transition-colors duration-200`}
+            className={`text-primary text-4xl hover:text-blue-500 transition-colors duration-200`}
           />
         </a>
         <a
@@ -27,7 +28,7 @@ const Header: React.FC = () => {
         >
           <FontAwesomeIcon
             icon={faGithub}
-            className={`text-[${colors.primary}] text-4xl hover:text-gray-400 transition-colors duration-200`}
+            className={`text-primary text-4xl hover:text-gray-400 transition-colors duration-200`}
           />
         </a>
       </div>
