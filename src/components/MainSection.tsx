@@ -9,9 +9,7 @@ const MainSection = () => {
         <span className="text-secondary">Full Stack Developer</span>
       </h1>
 
-      <p
-      // className={`mt-4 text-lg md:text-xl text-[${colors.primary}] max-w-xl mx-20`}
-      >
+      <p className={`mt-4 text-lg md:text-xl text-primary max-w-xl mx-20`}>
         Delivering full stack solutions with performance and precision
       </p>
     </div>

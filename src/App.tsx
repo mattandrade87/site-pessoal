@@ -1,10 +1,9 @@
 import React from "react";
 import Header from "./components/Header";
 import AnimatedBackground from "./components/AnimatedBackground";
-// import Highlight from "./components/Highlight";
-import Features from "./components/Features";
 import "./App.css";
 import MainSection from "./components/MainSection";
+import About from "./components/About";
 
 const App: React.FC = () => {
   return (
@@ -15,8 +14,7 @@ const App: React.FC = () => {
         <AnimatedBackground />
       </div>
 
-      {/* <Highlight /> */}
-      <Features />
+      <About />
     </>
   );
 };

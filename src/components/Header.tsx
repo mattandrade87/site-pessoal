@@ -6,8 +6,18 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black h-8">
       <div className="flex justify-end gap-6 ">
+      <button
+          className={`text-icons text-2xl hover:underline tracking-normal cursor-pointer`}
+        >
+          Inicio
+        </button>
         <button
-          className={`text-primary text-2xl hover:underline tracking-normal`}
+          className={`text-icons text-2xl hover:underline tracking-normal cursor-pointer`}
+        >
+          Contact
+        </button>
+        <button
+          className={`text-icons text-2xl hover:underline tracking-normal cursor-pointer`}
         >
           About me
         </button>
@@ -18,7 +28,7 @@ const Header: React.FC = () => {
         >
           <FontAwesomeIcon
             icon={faLinkedin}
-            className={`text-primary text-4xl hover:text-blue-500 transition-colors duration-200`}
+            className={`text-icons text-4xl hover:text-blue-500 transition-colors duration-200`}
           />
         </a>
         <a
@@ -28,7 +38,7 @@ const Header: React.FC = () => {
         >
           <FontAwesomeIcon
             icon={faGithub}
-            className={`text-primary text-4xl hover:text-gray-400 transition-colors duration-200`}
+            className={`text-icons text-4xl hover:text-gray-400 transition-colors duration-200`}
           />
         </a>
       </div>
