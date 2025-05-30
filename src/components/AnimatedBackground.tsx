@@ -91,16 +91,6 @@ const AnimatedBackground: React.FC = () => {
   return (
     <div id="vanta-bg">
       <canvas ref={canvasRef} id="particle-canvas"></canvas>
-      <div className="content">
-        <h1>
-          Mateus Andrade
-          <br />
-          IA Solutions
-        </h1>
-        <p className="subtitle">
-          Delivering full stack solutions with performance and precision
-        </p>
-      </div>
     </div>
   );
 };
