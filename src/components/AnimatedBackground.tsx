@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import colors from "../styles/colors";
 
 declare class SimplexNoise {
   noise3D(x: number, y: number, z: number): number;
@@ -68,8 +69,8 @@ const AnimatedBackground: React.FC = () => {
           ctx.save();
           ctx.beginPath();
           ctx.arc(x, y, POINT_RADIUS, 0, Math.PI * 2);
-          ctx.fillStyle = "#d2b48c";
-          ctx.shadowColor = "red";
+          ctx.fillStyle = colors.backgroundAnimation;
+          //   ctx.shadowColor = "red";
           ctx.shadowBlur = 0;
           ctx.globalAlpha = 0.8;
           ctx.fill();
