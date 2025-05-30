@@ -93,11 +93,12 @@ const AnimatedBackground: React.FC = () => {
       <canvas ref={canvasRef} id="particle-canvas"></canvas>
       <div className="content">
         <h1>
-          Mion Tech <br />
+          Mateus Andrade
+          <br />
           IA Solutions
         </h1>
         <p className="subtitle">
-          Powerful management software to optimize your business operations
+          Delivering full stack solutions with performance and precision
         </p>
       </div>
     </div>
