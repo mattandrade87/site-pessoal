@@ -11,7 +11,7 @@ const AnimatedBackground: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d")!;
     if (!ctx) return;
 
     let width: number = window.innerWidth;
@@ -31,12 +31,17 @@ const AnimatedBackground: React.FC = () => {
     const simplex = new SimplexNoise();
 
     function resizeCanvas(): void {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
-    }
+      const canvas = document.getElementById(
+        "particle-canvas"
+      ) as HTMLCanvasElement | null;
 
+      if (canvas) {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      }
+    }
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
