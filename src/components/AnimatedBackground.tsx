@@ -31,16 +31,13 @@ const AnimatedBackground: React.FC = () => {
     const simplex = new SimplexNoise();
 
     function resizeCanvas(): void {
-      const canvas = document.getElementById(
-        "particle-canvas"
-      ) as HTMLCanvasElement | null;
+      const currentCanvas = canvasRef.current;
+      if (!currentCanvas) return;
 
-      if (canvas) {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
-      }
+      width = window.innerWidth;
+      height = window.innerHeight;
+      currentCanvas.width = width;
+      currentCanvas.height = height;
     }
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
@@ -74,8 +71,6 @@ const AnimatedBackground: React.FC = () => {
           ctx.save();
           ctx.beginPath();
           ctx.arc(x, y, POINT_RADIUS, 0, Math.PI * 2);
-          // ctx.fillStyle = colors.backgroundAnimation;
-          //   ctx.shadowColor = "red";
           ctx.shadowBlur = 0;
           ctx.globalAlpha = 0.8;
           ctx.fill();
@@ -95,8 +90,12 @@ const AnimatedBackground: React.FC = () => {
   }, []);
 
   return (
-    <div id="vanta-bg">
-      <canvas ref={canvasRef} id="particle-canvas"></canvas>
+    <div id="vanta-bg" className="fixed inset-0 w-full h-full">
+      <canvas
+        ref={canvasRef}
+        id="particle-canvas"
+        className="w-full h-full"
+      ></canvas>
     </div>
   );
 };
