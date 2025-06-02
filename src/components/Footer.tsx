@@ -3,10 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
   faPhone,
-  faUser,
   faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -49,35 +48,19 @@ const Footer: React.FC = () => {
             <span className="text-sm md:text-base">+55 (31) 98603-9374</span>
           </a>
 
-          {/* Idade */}
-          <div className="flex items-center gap-3 text-primary">
-            <FontAwesomeIcon
-              icon={faUser}
-              className="text-2xl text-secondary"
-            />
-            <span className="text-sm md:text-base">23 anos</span>
-          </div>
-
           {/* Redes Sociais */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://www.linkedin.com/in/mateus-andrade-dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-primary hover:text-secondary transition-colors duration-300"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a
-              href="https://github.com/mattandrade87"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-primary hover:text-secondary transition-colors duration-300"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </div>
+          <a
+            href="https://www.instagram.com/matt.andrade87/?igsh=c2xydjBmZzRpdjEz&utm_source=qr#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-secondary hover:text-primary transition-colors duration-300"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
+            <span className="text-sm md:text-base text-primary">Instagram</span>
+          </a>
         </div>
+
+        
 
         {/* Linha Divisória */}
         <div className="w-full h-px bg-secondary/20 mb-8"></div>
