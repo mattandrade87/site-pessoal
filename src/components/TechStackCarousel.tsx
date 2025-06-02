@@ -1,0 +1,74 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faJs,
+  faPython,
+  faPhp,
+  faDocker,
+  faNodeJs,
+  faReact,
+  faJava,
+  faAndroid,
+} from "@fortawesome/free-brands-svg-icons";
+
+const TechStackCarousel: React.FC = () => {
+  const techStack = [
+    { name: "JavaScript", icon: faJs, color: "#F7DF1E" },
+    { name: "TypeScript", icon: faJs, color: "#3178C6" },
+    { name: "Python", icon: faPython, color: "#3776AB" },
+    { name: "PHP", icon: faPhp, color: "#777BB4" },
+    { name: "Docker", icon: faDocker, color: "#2496ED" },
+    { name: "Node.js", icon: faNodeJs, color: "#339933" },
+    { name: "React", icon: faReact, color: "#61DAFB" },
+    { name: "Java", icon: faJava, color: "#007396" },
+    { name: "React Native", icon: faAndroid, color: "#61DAFB" },
+  ];
+
+  return (
+    <section className="-translate-y-50 w-full py-0 px-4 md:px-8 lg:px-15 overflow-hidden">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl text-secondary mb-8 text-center">
+        Tecnologias
+      </h2>
+
+      <div className="relative">
+        <div className="flex gap-8 md:gap-12 animate-scroll">
+          {/* Primeira sequência */}
+          {techStack.map((tech, index) => (
+            <div
+              key={`first-${index}`}
+              className="flex flex-col items-center gap-2 min-w-[100px]"
+            >
+              <FontAwesomeIcon
+                icon={tech.icon}
+                className="text-4xl md:text-5xl transition-transform duration-300 hover:scale-110"
+                style={{ color: tech.color }}
+              />
+              <span className="text-primary text-sm md:text-base whitespace-nowrap">
+                {tech.name}
+              </span>
+            </div>
+          ))}
+
+          {/* Segunda sequência (duplicada para efeito contínuo) */}
+          {techStack.map((tech, index) => (
+            <div
+              key={`second-${index}`}
+              className="flex flex-col items-center gap-2 min-w-[100px]"
+            >
+              <FontAwesomeIcon
+                icon={tech.icon}
+                className="text-4xl md:text-5xl transition-transform duration-300 hover:scale-110"
+                style={{ color: tech.color }}
+              />
+              <span className="text-primary text-sm md:text-base">
+                {tech.name}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TechStackCarousel;

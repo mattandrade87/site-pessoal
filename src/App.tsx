@@ -4,6 +4,7 @@ import AnimatedBackground from "./components/AnimatedBackground";
 import "./App.css";
 import MainSection from "./components/MainSection";
 import About from "./components/About";
+import TechStackCarousel from "./components/TechStackCarousel";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,8 @@ const App: React.FC = () => {
       </div>
 
       <About />
+
+      <TechStackCarousel />
     </>
   );
 };
