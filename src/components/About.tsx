@@ -2,7 +2,10 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section className="relative -translate-y-50 bg-transparent px-6 py-12 sm:py-16 md:py-20 lg:py-24 min-h-[500px]">
+    <section
+      id="sobre-mim"
+      className="relative -translate-y-50 bg-transparent px-6 py-12 sm:py-16 md:py-20 lg:py-24 min-h-[500px]"
+    >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:min-h-[500px]">
         {/* Lado da Imagem */}
         <div className="w-full md:w-1/2 flex items-center justify-center md:justify-center">

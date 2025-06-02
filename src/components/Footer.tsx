@@ -18,7 +18,10 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-black/50 backdrop-blur-sm py-12 px-4 md:px-8 lg:px-15">
+    <footer
+      id="contato"
+      className="w-full bg-black/50 backdrop-blur-sm py-12 px-4 md:px-8 lg:px-15"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Seção de Contato */}
         <div className="flex flex-col items-start gap-6 mb-12">
@@ -60,8 +63,6 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        
-
         {/* Linha Divisória */}
         <div className="w-full h-px bg-secondary/20 mb-8"></div>
 
@@ -71,7 +72,7 @@ const Footer: React.FC = () => {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-primary hover:text-secondary transition-colors duration-300"
+            className="flex items-center gap-2 cursor-pointer text-primary hover:text-secondary transition-colors duration-300"
           >
             <span className="text-sm">Voltar ao topo</span>
             <FontAwesomeIcon

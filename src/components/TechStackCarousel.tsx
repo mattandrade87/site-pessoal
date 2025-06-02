@@ -25,7 +25,10 @@ const TechStackCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="-translate-y-50 w-full py-0 px-4 md:px-8 lg:px-15 overflow-hidden">
+    <section
+      id="tecnologias"
+      className="-translate-y-50 w-full py-0 px-4 md:px-8 lg:px-15 overflow-hidden"
+    >
       <h2 className="text-2xl sm:text-3xl md:text-4xl text-secondary mb-8 text-center">
         Tecnologias
       </h2>

@@ -2,6 +2,19 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+interface NavItem {
+  label: string;
+  id: string;
+  offset: number;
+}
+
+const navItems: NavItem[] = [
+  { label: "Início", id: "inicio", offset: 80 },
+  { label: "Sobre Mim", id: "sobre-mim", offset: 50 }, // Considerando o -translate-y-50
+  { label: "Tecnologias", id: "tecnologias", offset: 130 }, // Considerando o -translate-y-50
+  { label: "Contato", id: "contato", offset: 80 },
+];
+
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -11,10 +24,21 @@ const Header: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // cleanup
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (id: string, offset: number) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <header
@@ -23,15 +47,15 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="flex flex-wrap justify-end items-center gap-4 sm:gap-6">
-        <button className="text-icons text-sm sm:text-lg md:text-xl hover:underline cursor-pointer ">
-          Início
-        </button>
-        <button className="text-icons text-sm sm:text-lg md:text-xl hover:underline cursor-pointer">
-          Contato
-        </button>
-        <button className="text-icons text-sm sm:text-lg md:text-xl hover:underline cursor-pointer">
-          Sobre Mim
-        </button>
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => scrollToSection(item.id, item.offset)}
+            className="text-icons text-sm sm:text-lg md:text-xl hover:underline cursor-pointer"
+          >
+            {item.label}
+          </button>
+        ))}
         <a
           href="https://www.linkedin.com/in/mateus-andrade-dev/"
           target="_blank"
