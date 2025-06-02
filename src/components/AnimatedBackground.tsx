@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 
-
 declare class SimplexNoise {
   noise3D(x: number, y: number, z: number): number;
 }

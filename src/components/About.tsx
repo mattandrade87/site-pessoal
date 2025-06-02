@@ -2,9 +2,11 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section className="relative bg-transparent h-300 -mt-18 left-15 ">
-      <h1 className="text-4xl text-secondary relative ">Sobre Mim </h1>
-      <div className="text-2xl text-primary space-y-6  mt-10">
+    <section className="relative bg-transparent px-6 py-12 sm:py-16 md:py-20 lg:py-24">
+      <h1 className="text-3xl sm:text-4xl text-secondary text-center mb-10">
+        Sobre Mim
+      </h1>
+      <div className="text-base sm:text-lg md:text-xl text-primary space-y-6 max-w-4xl mx-auto">
         <p>
           Sou estudante de Sistemas de Informação na Universidade Federal de
           Ouro Preto, com experiência prática no desenvolvimento de aplicações
