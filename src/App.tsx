@@ -5,6 +5,7 @@ import "./App.css";
 import MainSection from "./components/MainSection";
 import About from "./components/About";
 import TechStackCarousel from "./components/TechStackCarousel";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,8 @@ const App: React.FC = () => {
       <About />
 
       <TechStackCarousel />
+
+      <Footer />
     </>
   );
 };
