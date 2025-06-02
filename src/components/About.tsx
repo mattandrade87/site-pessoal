@@ -2,14 +2,14 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section className="relative bg-transparent px-6 py-12 sm:py-16 md:py-20 lg:py-24 min-h-[500px]">
+    <section className="relative -translate-y-50 bg-transparent px-6 py-12 sm:py-16 md:py-20 lg:py-24 min-h-[500px]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:min-h-[500px]">
         {/* Lado da Imagem */}
         <div className="w-full md:w-1/2 flex items-center justify-center md:justify-center">
           <img
-            src="/avatar.jpg" // Substitua com seu caminho
+            src="/avatar.jpg"
             alt="Mateus Andrade"
-            className="w-64 h-64 object-cover rounded-xl shadow-lg md:translate-x-8"
+            className="w-80 h-80 object-cover rounded-xl shadow-lg md:translate-x-8"
           />
         </div>
 
@@ -26,16 +26,10 @@ const About: React.FC = () => {
             PHP.
           </p>
           <p className="text-justify">
-            Ao longo dos meus projetos, utilizei tecnologias como React e React
-            Native para criar soluções responsivas e que garantem uma
-            experiência de usuário fluida, e Node.js com TypeScript no
-            desenvolvimento de APIs robustas. No gerenciamento de dados,
-            integrei o PostgreSQL para sistemas de autenticação, como SignUp e
-            Login, e empreguei Docker para assegurar a portabilidade e facilitar
-            os processos de deploy, sempre com foco em estabilidade e segurança
-            das aplicações. Sou apaixonado por desenvolvimento de software,
-            busco constante aprendizado e estou sempre explorando novas
-            tecnologias para entregar soluções inovadoras e de alta qualidade.
+            Em meus projetos, trabalhei com React, React Native, Node.js e
+            TypeScript, além de PostgreSQL para gerenciamento de dados e Docker
+            para deploy, sempre priorizando estabilidade e segurança. Sou
+            apaixonado por tecnologia e busco constantemente aprender e inovar.
           </p>
         </div>
       </div>
