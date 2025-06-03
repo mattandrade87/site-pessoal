@@ -1,4 +1,5 @@
 import React from "react";
+import avatar from "../assets/avatar.jpg";
 
 const About: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const About: React.FC = () => {
         {/* Lado da Imagem */}
         <div className="w-full md:w-1/2 flex items-center justify-center md:justify-center">
           <img
-            src="/avatar.jpg"
+            src={avatar}
             alt="Mateus Andrade"
             className="w-80 h-80 object-cover rounded-xl shadow-lg md:translate-x-8"
           />
