@@ -45,26 +45,26 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-650 bg-black bg-opacity-30 py-4 px-6 sm:px-10 transition-shadow duration-300 ${
+      className={`fixed top-0 left-0 w-full z-650 bg-black bg-opacity-30 py-6 px-8 sm:px-12 transition-shadow duration-300 ${
         scrolled ? "shadow-md border-b border-gray-700" : ""
       }`}
     >
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-icons text-2xl"
+          className="md:hidden text-icons text-3xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id, item.offset)}
-              className="text-icons text-lg hover:underline cursor-pointer"
+              className="text-icons text-xl hover:underline cursor-pointer"
             >
               {item.label}
             </button>
@@ -72,12 +72,12 @@ const Header: React.FC = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <a
             href="https://www.linkedin.com/in/mateus-andrade-dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-icons text-2xl hover:text-blue-500 transition-colors duration-200"
+            className="text-icons text-3xl hover:text-blue-500 transition-colors duration-200"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
             href="https://github.com/mattandrade87"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-icons text-2xl hover:text-gray-400 transition-colors duration-200"
+            className="text-icons text-3xl hover:text-gray-400 transition-colors duration-200"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
@@ -94,13 +94,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden mt-4 bg-black bg-opacity-90 rounded-lg p-4">
-          <div className="flex flex-col gap-4">
+        <div className="md:hidden mt-6 bg-black bg-opacity-90 rounded-lg p-6">
+          <div className="flex flex-col gap-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id, item.offset)}
-                className="text-icons text-lg hover:underline cursor-pointer text-left"
+                className="text-icons text-xl hover:underline cursor-pointer text-left"
               >
                 {item.label}
               </button>
