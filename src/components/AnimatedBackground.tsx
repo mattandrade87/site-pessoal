@@ -90,11 +90,15 @@ const AnimatedBackground: React.FC = () => {
   }, []);
 
   return (
-    <div id="vanta-bg" className="fixed inset-0 w-full h-full">
+    <div
+      id="vanta-bg"
+      className="fixed inset-0 w-screen h-full pointer-events-none"
+    >
       <canvas
         ref={canvasRef}
         id="particle-canvas"
-        className="w-full h-full"
+        className="w-screen h-full"
+        style={{ zIndex: 0 }}
       ></canvas>
     </div>
   );

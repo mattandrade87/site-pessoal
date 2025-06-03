@@ -9,11 +9,11 @@ const About: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:min-h-[500px] gap-8 md:gap-12">
         {/* Lado da Imagem */}
-        <div className="w-full md:w-1/2 flex items-center justify-center">
+        <div className="w-full md:w-1/2 flex items-center justify-center relative z-10">
           <img
             src={avatar}
             alt="Mateus Andrade"
-            className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover rounded-xl shadow-lg z-1000"
+            className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover rounded-xl shadow-lg"
           />
         </div>
 
