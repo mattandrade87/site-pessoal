@@ -13,7 +13,7 @@ const About: React.FC = () => {
           <img
             src={avatar}
             alt="Mateus Andrade"
-            className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover rounded-xl shadow-lg"
+            className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover rounded-xl shadow-lg z-1000"
           />
         </div>
 
