@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 interface NavItem {
   label: string;
@@ -17,6 +18,7 @@ const navItems: NavItem[] = [
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +39,7 @@ const Header: React.FC = () => {
         top: offsetPosition,
         behavior: "smooth",
       });
+      setIsMenuOpen(false);
     }
   };
 
@@ -46,37 +49,65 @@ const Header: React.FC = () => {
         scrolled ? "shadow-md border-b border-gray-700" : ""
       }`}
     >
-      <div className="flex flex-wrap justify-end items-center gap-4 sm:gap-6">
-        {navItems.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => scrollToSection(item.id, item.offset)}
-            className="text-icons text-sm sm:text-lg md:text-xl hover:underline cursor-pointer"
+      <div className="flex justify-between items-center">
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-icons text-2xl"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        </button>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id, item.offset)}
+              className="text-icons text-lg hover:underline cursor-pointer"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Social Icons */}
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/mateus-andrade-dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-icons text-2xl hover:text-blue-500 transition-colors duration-200"
           >
-            {item.label}
-          </button>
-        ))}
-        <a
-          href="https://www.linkedin.com/in/mateus-andrade-dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            className="text-icons text-2xl sm:text-3xl md:text-4xl hover:text-blue-500 transition-colors duration-200"
-          />
-        </a>
-        <a
-          href="https://github.com/mattandrade87"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="text-icons text-2xl sm:text-3xl md:text-4xl hover:text-gray-400 transition-colors duration-200"
-          />
-        </a>
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a
+            href="https://github.com/mattandrade87"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-icons text-2xl hover:text-gray-400 transition-colors duration-200"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden mt-4 bg-black bg-opacity-90 rounded-lg p-4">
+          <div className="flex flex-col gap-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id, item.offset)}
+                className="text-icons text-lg hover:underline cursor-pointer text-left"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 };
