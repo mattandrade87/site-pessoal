@@ -1,0 +1,37 @@
+{
+  "welcome": "Welcome",
+  "description": "This is a sample internationalized application",
+  "navigation": {
+    "home": "Home",
+    "about": "About Me",
+    "technologies": "Technologies",
+    "contact": "Contact"
+  },
+  "main": {
+    "title": "Mateus Andrade",
+    "subtitle": "Full Stack Developer",
+    "description": "Passionate about creating innovative solutions and transforming ideas into reality through code."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a Systems Information student at UFOP with practical experience in Full-stack development (Back-end, Front-end, and Mobile) for e-commerce applications. I worked as a freelance developer and currently work at a large company using React and PHP.",
+    "description2": "In my projects, I worked with React, React Native, Node.js, and TypeScript, as well as PostgreSQL for data management and Docker for deployment, always prioritizing stability and security. I am passionate about technology and constantly seek to learn and innovate."
+  },
+  "technologies": {
+    "title": "Technologies I work with"
+
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Get in touch with me"
+  },
+  "footer": {
+    "backToTop": "Back to top",
+    "instagram": "Instagram",
+    "curriculum": "Resume"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel"
+  }
+}

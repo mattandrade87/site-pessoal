@@ -4,10 +4,15 @@ import {
   faEnvelope,
   faPhone,
   faArrowUp,
+  faFileDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
+import curriculoPDF from "../assets/curriculoMateusAndrade.pdf";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -53,19 +58,34 @@ const Footer: React.FC = () => {
             </span>
           </a>
 
+          {/* Currículo */}
+          <a
+            href={curriculoPDF}
+            download
+            className="group flex items-center gap-2 sm:gap-3 text-primary hover:text-secondary transition-colors duration-300"
+          >
+            <FontAwesomeIcon
+              icon={faFileDownload}
+              className="text-xl sm:text-2xl text-secondary  transition-colors duration-300"
+            />
+            <span className="text-xs sm:text-sm md:text-base text-primary hover:text-secondary transition-colors duration-300">
+              {t("footer.curriculum")}
+            </span>
+          </a>
+
           {/* Redes Sociais */}
           <a
             href="https://www.instagram.com/matt.andrade87/?igsh=c2xydjBmZzRpdjEz&utm_source=qr#"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 sm:gap-3 text-secondary hover:text-primary transition-colors duration-300"
+            className="flex items-center gap-2 sm:gap-3 text-secondary transition-colors duration-300"
           >
             <FontAwesomeIcon
               icon={faInstagram}
               className="text-xl sm:text-2xl"
             />
-            <span className="text-xs sm:text-sm md:text-base text-primary">
-              Instagram
+            <span className="text-xs sm:text-sm md:text-base text-primary hover:text-secondary">
+              {t("footer.instagram")}
             </span>
           </a>
         </div>
@@ -81,7 +101,7 @@ const Footer: React.FC = () => {
             onClick={scrollToTop}
             className="flex items-center gap-2 cursor-pointer text-primary hover:text-secondary transition-colors duration-300"
           >
-            <span className="text-xs sm:text-sm">Voltar ao topo</span>
+            <span className="text-xs sm:text-sm">{t("footer.backToTop")}</span>
             <FontAwesomeIcon
               icon={faArrowUp}
               className="text-base sm:text-lg animate-bounce"

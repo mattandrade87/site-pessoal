@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 interface NavItem {
   label: string;
@@ -9,16 +10,17 @@ interface NavItem {
   offset: number;
 }
 
-const navItems: NavItem[] = [
-  { label: "Início", id: "inicio", offset: 80 },
-  { label: "Sobre Mim", id: "sobre-mim", offset: 50 }, // Considerando o -translate-y-50
-  { label: "Tecnologias", id: "tecnologias", offset: 130 }, // Considerando o -translate-y-50
-  { label: "Contato", id: "contato", offset: 80 },
-];
-
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems: NavItem[] = [
+    { label: t("navigation.home"), id: "inicio", offset: 80 },
+    { label: t("navigation.about"), id: "sobre-mim", offset: 50 },
+    { label: t("navigation.technologies"), id: "tecnologias", offset: 130 },
+    { label: t("navigation.contact"), id: "contato", offset: 80 },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {

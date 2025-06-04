@@ -10,8 +10,10 @@ import {
   faJava,
   faAndroid,
 } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const TechStackCarousel: React.FC = () => {
+  const { t } = useTranslation();
   const techStack = [
     { name: "JavaScript", icon: faJs, color: "#F7DF1E" },
     { name: "TypeScript", icon: faJs, color: "#3178C6" },
@@ -30,7 +32,7 @@ const TechStackCarousel: React.FC = () => {
       className="-translate-y-50 w-full py-8 sm:py-12 px-4 sm:px-6 md:px-8 lg:px-15 overflow-hidden"
     >
       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary mb-6 sm:mb-8 text-center">
-        Tecnologias
+        {t("technologies.title")}
       </h2>
 
       <div className="relative">
@@ -64,7 +66,7 @@ const TechStackCarousel: React.FC = () => {
                 style={{ color: tech.color }}
               />
               <span className="text-primary text-xs sm:text-sm md:text-base whitespace-nowrap">
-                {tech.name}
+                {t(`technologies.${tech.name}`)}
               </span>
             </div>
           ))}

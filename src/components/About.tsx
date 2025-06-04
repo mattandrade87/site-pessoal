@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import avatar from "../assets/avatar.jpg";
 
 const About: React.FC = () => {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    // Forçar a atualização das traduções quando o componente montar
+    i18n.changeLanguage(i18n.language);
+  }, [i18n]);
+
   return (
     <section
       id="sobre-mim"
@@ -12,7 +20,7 @@ const About: React.FC = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center relative z-10">
           <img
             src={avatar}
-            alt="Mateus Andrade"
+            alt={t("main.title")}
             className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover rounded-xl shadow-lg"
           />
         </div>
@@ -20,21 +28,10 @@ const About: React.FC = () => {
         {/* Lado do Texto */}
         <div className="w-full md:w-1/2 flex flex-col justify-center text-sm sm:text-base md:text-lg text-primary space-y-4 sm:space-y-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl text-secondary mb-4 sm:mb-6 text-left">
-            Sobre Mim
+            {t("about.title")}
           </h1>
-          <p className="text-justify">
-            Sou estudante de Sistemas de Informação na UFOP com experiência
-            prática em desenvolvimento Full-stack (Back-end, Front-end e Mobile)
-            para aplicações de e-commerce. Atuei como desenvolvedor freelancer
-            e, atualmente, trabalho em uma grande empresa utilizando React e
-            PHP.
-          </p>
-          <p className="text-justify">
-            Em meus projetos, trabalhei com React, React Native, Node.js e
-            TypeScript, além de PostgreSQL para gerenciamento de dados e Docker
-            para deploy, sempre priorizando estabilidade e segurança. Sou
-            apaixonado por tecnologia e busco constantemente aprender e inovar.
-          </p>
+          <p className="text-justify">{t("about.description")}</p>
+          <p className="text-justify">{t("about.description2")}</p>
         </div>
       </div>
     </section>
