@@ -7,15 +7,13 @@ import TechStackCarousel from "./components/TechStackCarousel";
 import Footer from "./components/Footer";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 
-
 function App() {
-
   return (
     <div className="relative">
-      <div className="absolute top-4 right-4 z-50">
+      <Header />
+      <div className="fixed top-18 right-4 z-[700]">
         <LanguageSwitcher />
       </div>
-      <Header />
       <MainSection />
       <div className="mt-20">
         <AnimatedBackground />

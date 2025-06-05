@@ -14,12 +14,11 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I am a Systems Information student at UFOP with practical experience in Full-stack development (Back-end, Front-end, and Mobile) for e-commerce applications. I worked as a freelance developer and currently work at a large company using React and PHP.",
-    "description2": "In my projects, I worked with React, React Native, Node.js, and TypeScript, as well as PostgreSQL for data management and Docker for deployment, always prioritizing stability and security. I am passionate about technology and constantly seek to learn and innovate."
+    "description": "I am an Information Systems student at UFOP with practical experience in full stack development, working on e-commerce projects across back-end, front-end, and mobile. I have worked as a freelancer and currently contribute at a large company, primarily using React on the front-end and PHP on the back-end.",
+    "description2": "In my projects, I have acted as a Full Cycle Developer, participating in all stages—from conception to deployment—with a focus on stability, performance, and security. I have worked with React, React Native, Node.js, TypeScript, and PostgreSQL for data management. I utilize Docker to create standardized development environments, facilitate container versioning, and ensure scalability of applications across different environments (development, staging, and production). I am passionate about technology and constantly seek continuous learning and innovation."
   },
   "technologies": {
     "title": "Technologies I work with"
-
   },
   "contact": {
     "title": "Contact",

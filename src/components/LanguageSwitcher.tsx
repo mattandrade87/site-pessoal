@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 export const LanguageSwitcher = () => {
@@ -6,32 +5,31 @@ export const LanguageSwitcher = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng).then(() => {
-      // Forçar a atualização do DOM após a mudança de idioma
       window.location.reload();
     });
   };
 
   return (
-    <div className="language-switcher flex gap-2">
+    <div className="language-switcher flex gap-1 sm:gap-2 bg-black/30 backdrop-blur-sm p-1 rounded-lg border border-gray-700">
       <button
         onClick={() => changeLanguage("en")}
-        className={`px-3 py-1 rounded ${
+        className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded text-xs sm:text-sm transition-colors duration-300 ${
           i18n.language === "en"
-            ? "bg-blue-500 text-white"
-            : "bg-gray-200 text-gray-700"
+            ? "bg-secondary text-primary"
+            : "bg-transparent text-primary hover:bg-gray-700/50"
         }`}
       >
-        English
+        EN
       </button>
       <button
         onClick={() => changeLanguage("pt")}
-        className={`px-3 py-1 rounded ${
+        className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded text-xs sm:text-sm transition-colors duration-300 ${
           i18n.language === "pt"
-            ? "bg-blue-500 text-white"
-            : "bg-gray-200 text-gray-700"
+            ? "bg-secondary text-primary"
+            : "bg-transparent text-primary hover:bg-gray-700/50"
         }`}
       >
-        Português
+        pt-BR
       </button>
     </div>
   );

@@ -66,7 +66,7 @@ const TechStackCarousel: React.FC = () => {
                 style={{ color: tech.color }}
               />
               <span className="text-primary text-xs sm:text-sm md:text-base whitespace-nowrap">
-                {t(`technologies.${tech.name}`)}
+                {tech.name}
               </span>
             </div>
           ))}
