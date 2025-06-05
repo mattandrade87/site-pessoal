@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           {/* Email */}
           <a
             href="mailto:mateus.vitor.andrade@gmail.com"
-            className="flex items-center gap-2 sm:gap-3 text-primary hover:text-secondary transition-colors duration-300"
+            className="flex items-center gap-2 sm:gap-3 text-primary hover:text-secondary transition-colors duration-300 font-body"
           >
             <FontAwesomeIcon
               icon={faEnvelope}
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           {/* Telefone */}
           <a
             href="tel:+5531986039374"
-            className="flex items-center gap-2 sm:gap-3 text-primary hover:text-secondary transition-colors duration-300"
+            className="flex items-center gap-2 sm:gap-3 text-primary hover:text-secondary transition-colors duration-300 font-body"
           >
             <FontAwesomeIcon
               icon={faPhone}
@@ -62,11 +62,11 @@ const Footer: React.FC = () => {
           <a
             href={curriculoPDF}
             download
-            className="group flex items-center gap-2 sm:gap-3 text-primary hover:text-secondary transition-colors duration-300"
+            className="group flex items-center gap-2 sm:gap-3 text-primary hover:text-secondary transition-colors duration-300 font-body"
           >
             <FontAwesomeIcon
               icon={faFileDownload}
-              className="text-xl sm:text-2xl text-secondary  transition-colors duration-300"
+              className="text-xl sm:text-2xl text-secondary transition-colors duration-300"
             />
             <span className="text-xs sm:text-sm md:text-base text-primary hover:text-secondary transition-colors duration-300">
               {t("footer.curriculum")}
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
             href="https://www.instagram.com/matt.andrade87/?igsh=c2xydjBmZzRpdjEz&utm_source=qr#"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 sm:gap-3 text-secondary transition-colors duration-300"
+            className="flex items-center gap-2 sm:gap-3 text-secondary transition-colors duration-300 font-body"
           >
             <FontAwesomeIcon
               icon={faInstagram}

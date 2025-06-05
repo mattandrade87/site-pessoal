@@ -13,7 +13,7 @@ export const LanguageSwitcher = () => {
     <div className="language-switcher flex gap-1 sm:gap-2 bg-black/30 backdrop-blur-sm p-1 rounded-lg border border-gray-700">
       <button
         onClick={() => changeLanguage("en")}
-        className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded text-xs sm:text-sm transition-colors duration-300 ${
+        className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded text-xs sm:text-sm transition-colors duration-300 font-body ${
           i18n.language === "en"
             ? "bg-secondary text-primary"
             : "bg-transparent text-primary hover:bg-gray-700/50"
@@ -23,13 +23,13 @@ export const LanguageSwitcher = () => {
       </button>
       <button
         onClick={() => changeLanguage("pt")}
-        className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded text-xs sm:text-sm transition-colors duration-300 ${
+        className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded text-xs sm:text-sm transition-colors duration-300 font-body ${
           i18n.language === "pt"
             ? "bg-secondary text-primary"
             : "bg-transparent text-primary hover:bg-gray-700/50"
         }`}
       >
-        pt-BR
+        PT
       </button>
     </div>
   );

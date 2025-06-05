@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id, item.offset)}
-              className="text-icons text-xl hover:underline cursor-pointer"
+              className="text-icons text-xl hover:underline cursor-pointer font-body"
             >
               {item.label}
             </button>

@@ -5,7 +5,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   background: #000;
   position: relative;
   width: 100%;
