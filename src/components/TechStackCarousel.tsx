@@ -1,3 +1,4 @@
+// Tipagem explícita para evitar conflitos
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,20 +11,38 @@ import {
   faJava,
   faAndroid,
 } from "@fortawesome/free-brands-svg-icons";
+import { RiNextjsFill } from "react-icons/ri";
+import type { IconType } from "react-icons";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { useTranslation } from "react-i18next";
+
+// Tipos possíveis
+type TechItem = {
+  name: string;
+  color: string;
+  type: "fa" | "react-icon";
+  icon: IconDefinition | IconType;
+};
 
 const TechStackCarousel: React.FC = () => {
   const { t } = useTranslation();
-  const techStack = [
-    { name: "JavaScript", icon: faJs, color: "#F7DF1E" },
-    { name: "TypeScript", icon: faJs, color: "#3178C6" },
-    { name: "Python", icon: faPython, color: "#3776AB" },
-    { name: "PHP", icon: faPhp, color: "#777BB4" },
-    { name: "Docker", icon: faDocker, color: "#2496ED" },
-    { name: "Node.js", icon: faNodeJs, color: "#339933" },
-    { name: "React", icon: faReact, color: "#61DAFB" },
-    { name: "Java", icon: faJava, color: "#007396" },
-    { name: "React Native", icon: faAndroid, color: "#61DAFB" },
+
+  const techStack: TechItem[] = [
+    { name: "JavaScript", icon: faJs, color: "#F7DF1E", type: "fa" },
+    { name: "TypeScript", icon: faJs, color: "#3178C6", type: "fa" },
+    { name: "Python", icon: faPython, color: "#3776AB", type: "fa" },
+    { name: "PHP", icon: faPhp, color: "#777BB4", type: "fa" },
+    { name: "Docker", icon: faDocker, color: "#2496ED", type: "fa" },
+    { name: "Node.js", icon: faNodeJs, color: "#339933", type: "fa" },
+    { name: "React", icon: faReact, color: "#61DAFB", type: "fa" },
+    {
+      name: "Next.js",
+      icon: RiNextjsFill,
+      color: "#000000",
+      type: "react-icon",
+    },
+    { name: "Java", icon: faJava, color: "#007396", type: "fa" },
+    { name: "React Native", icon: faAndroid, color: "#61DAFB", type: "fa" },
   ];
 
   return (
@@ -37,39 +56,32 @@ const TechStackCarousel: React.FC = () => {
 
       <div className="relative">
         <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-12 animate-scroll">
-          {/* Primeira sequência */}
-          {techStack.map((tech, index) => (
-            <div
-              key={`first-${index}`}
-              className="flex flex-col items-center gap-1 sm:gap-2 min-w-[80px] sm:min-w-[100px]"
-            >
-              <FontAwesomeIcon
-                icon={tech.icon}
-                className="text-3xl sm:text-4xl md:text-5xl transition-transform duration-300 hover:scale-110"
-                style={{ color: tech.color }}
-              />
-              <span className="text-primary text-xs sm:text-sm md:text-base whitespace-nowrap">
-                {tech.name}
-              </span>
-            </div>
-          ))}
-
-          {/* Segunda sequência (duplicada para efeito contínuo) */}
-          {techStack.map((tech, index) => (
-            <div
-              key={`second-${index}`}
-              className="flex flex-col items-center gap-1 sm:gap-2 min-w-[80px] sm:min-w-[100px]"
-            >
-              <FontAwesomeIcon
-                icon={tech.icon}
-                className="text-3xl sm:text-4xl md:text-5xl transition-transform duration-300 hover:scale-110"
-                style={{ color: tech.color }}
-              />
-              <span className="text-primary text-xs sm:text-sm md:text-base whitespace-nowrap">
-                {tech.name}
-              </span>
-            </div>
-          ))}
+          {techStack.concat(techStack).map((tech, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-center gap-1 sm:gap-2 min-w-[80px] sm:min-w-[100px]"
+              >
+                {tech.type === "fa" ? (
+                  <FontAwesomeIcon
+                    icon={tech.icon as IconDefinition}
+                    className="text-3xl sm:text-4xl md:text-5xl transition-transform duration-300 hover:scale-110"
+                    style={{ color: tech.color }}
+                  />
+                ) : (
+                  // react-icons são componentes React
+                  React.createElement(tech.icon as IconType, {
+                    className:
+                      "text-3xl bg-white sm:text-4xl md:text-5xl transition-transform duration-300 hover:scale-110",
+                    style: { color: tech.color },
+                  })
+                )}
+                <span className="text-primary text-xs sm:text-sm md:text-base whitespace-nowrap">
+                  {tech.name}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
