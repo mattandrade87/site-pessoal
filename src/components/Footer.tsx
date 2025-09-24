@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
-import curriculoPDF from "../assets/curriculoMateusAndrade.pdf";
+import curriculoPDF from "/CurriculoMateusAndrade.pdf";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();

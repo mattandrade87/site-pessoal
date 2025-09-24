@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import avatar from "../assets/avatar.jpg";
+import avatar from "/avatar.jpg";
 
 const About: React.FC = () => {
   const { t, i18n } = useTranslation();
