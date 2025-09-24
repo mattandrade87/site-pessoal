@@ -6,4 +6,17 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/site-pessoal/",
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Preserva nomes de arquivos PDF
+          if (assetInfo.name && assetInfo.name.endsWith(".pdf")) {
+            return `assets/[name].[ext]`;
+          }
+          return `assets/[name]-[hash].[ext]`;
+        },
+      },
+    },
+  },
 });
