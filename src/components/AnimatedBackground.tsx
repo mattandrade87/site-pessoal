@@ -27,7 +27,6 @@ const AnimatedBackground: React.FC = () => {
     const START_HEIGHT = 0.3;
     const END_HEIGHT = 0.7;
 
-    // Criar instância do Simplex Noise
     const simplex = new SimplexNoise();
 
     function resizeCanvas(): void {
