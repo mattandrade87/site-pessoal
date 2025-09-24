@@ -17,7 +17,6 @@ const AnimatedBackground: React.FC = () => {
     let width: number = window.innerWidth;
     let height: number = window.innerHeight;
 
-    // Configurações da animação
     const LINE_COUNT = 25;
     const POINTS_PER_LINE = 80;
     const NOISE_SCALE = 0.005;
