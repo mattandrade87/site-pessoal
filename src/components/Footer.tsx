@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
 
           {/* Redes Sociais */}
           <a
-            href="https://www.instagram.com/matt.andrade87/?igsh=c2xydjBmZzRpdjEz&utm_source=qr#"
+            href="https://www.instagram.com/mateusvsandrade"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 sm:gap-3 text-secondary transition-colors duration-300 font-body"
