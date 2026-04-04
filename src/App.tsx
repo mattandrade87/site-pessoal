@@ -1,11 +1,15 @@
-import Header from "./components/Header";
-import AnimatedBackground from "./components/AnimatedBackground";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import { LanguageSwitcher } from "./components/layout/LanguageSwitcher";
+import MainSection from "./components/sections/MainSection";
+import About from "./components/sections/About";
+import Experience from "./components/sections/Experience";
+import Skills from "./components/sections/Skills";
+import Projects from "./components/sections/Projects";
+import Education from "./components/sections/Education";
+import AnimatedBackground from "./components/ui/AnimatedBackground";
+import TechStackCarousel from "./components/ui/TechStackCarousel";
 import "./App.css";
-import MainSection from "./components/MainSection";
-import About from "./components/About";
-import TechStackCarousel from "./components/TechStackCarousel";
-import Footer from "./components/Footer";
-import { LanguageSwitcher } from "./components/LanguageSwitcher";
 
 function App() {
   return (
@@ -15,11 +19,13 @@ function App() {
         <LanguageSwitcher />
       </div>
       <MainSection />
-      <div className="mt-20">
-        <AnimatedBackground />
-      </div>
+      <AnimatedBackground />
       <About />
+      <Experience />
+      <Skills />
       <TechStackCarousel />
+      <Projects />
+      <Education />
       <Footer />
     </div>
   );
