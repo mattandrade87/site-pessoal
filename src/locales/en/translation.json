@@ -1,36 +1,122 @@
 {
-  "welcome": "Welcome",
-  "description": "This is a sample internationalized application",
   "navigation": {
     "home": "Home",
-    "about": "About Me",
-    "technologies": "Technologies",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
     "contact": "Contact"
   },
   "main": {
     "title": "Mateus Andrade",
     "subtitle": "Full Stack Developer",
-    "description": "Passionate about creating innovative solutions and transforming ideas into reality through code."
+    "description": "Building performant, AI-powered applications with React Native, ASP.NET Core, and modern cloud infrastructure.",
+    "cta": "View my work"
+  },
+  "highlights": {
+    "metric1": "70%",
+    "label1": "LLM Response Time Reduction",
+    "metric2": "30%",
+    "label2": "Lighthouse Performance Gain",
+    "metric3": "2+",
+    "label3": "Years of Professional Experience"
   },
   "about": {
     "title": "About Me",
-    "description": "I am an Information Systems student at UFOP with practical experience in full stack development, working on e-commerce projects across back-end, front-end, and mobile. I have worked as a freelancer and currently contribute at a large company, primarily using React on the front-end and PHP on the back-end.",
-    "description2": "In my projects, I have acted as a Full Cycle Developer, participating in all stages—from conception to deployment—with a focus on stability, performance, and security. I have worked with React, React Native, Node.js, TypeScript, and PostgreSQL for data management. I utilize Docker to create standardized development environments, facilitate container versioning, and ensure scalability of applications across different environments (development, staging, and production). I am passionate about technology and constantly seek continuous learning and innovation."
+    "description": "Full Stack Developer with hands-on experience building mobile and web applications with AI integrations. Graduated in Information Systems from UFOP (2020–2025), I specialize in React Native, ASP.NET Core, and modern cloud-native architectures.",
+    "description2": "I have a track record of delivering measurable results: reducing LLM response times by 70% through async parallelism, and achieving 30% Lighthouse performance improvements via SSR optimization. I thrive in agile teams and am passionate about building products that combine performance, accessibility, and great developer experience."
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "role": "Full Stack Developer (Mobile & AI)",
+        "company": "",
+        "period": "Jan 2026 – Present",
+        "items": [
+          "Developing educational gamified app with AI voice agents using React Native + ASP.NET Core",
+          "Reduced LLM response time by 70% with async parallelism and streaming in C# .NET",
+          "Built complete gamification system with collectibles, progression mechanics, and customization",
+          "Implemented native push notifications (FCM/APNs) with scheduling for user retention",
+          "Designed scalable RESTful APIs with RabbitMQ/MassTransit for async message processing"
+        ]
+      },
+      {
+        "role": "Junior Developer",
+        "company": "Sigesis",
+        "period": "May 2025 – Jan 2026",
+        "items": [
+          "Led front-end of City Hall Portal with SSR, Dynamic Routing, and Revalidation in Next.js",
+          "Achieved 30% Lighthouse performance improvement through SSR and SEO optimizations",
+          "Built accessible design system with reusable components following WCAG guidelines"
+        ]
+      },
+      {
+        "role": "Full Stack Intern",
+        "company": "MT Soluções",
+        "period": "Oct 2023 – Jan 2025",
+        "items": [
+          "Implemented complete e-commerce flow: cart, checkout, and JWT authentication",
+          "Developed RESTful APIs with Node.js/Express and PostgreSQL database modeling"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      {
+        "name": "Woolly",
+        "tagline": "Educational Platform with Voice AI",
+        "year": "2026",
+        "description": "Gamified educational app featuring AI-powered voice agents for real-time interactive learning. Backend with async messaging, push notifications, and voice processing pipeline (AssemblyAI STT, Google TTS, OpenAI LLM). PostgreSQL via Supabase with Row Level Security.",
+        "tech": ["React Native", "Expo", "ASP.NET Core", "FastAPI", "PostgreSQL", "Docker", "WebRTC", "OpenAI"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "languages": {
+        "title": "Languages",
+        "items": ["TypeScript", "JavaScript", "C#", "Python", "PHP", "SQL"]
+      },
+      "frontend": {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "React Native (Expo)", "HTML5", "CSS3", "Tailwind CSS"]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": ["ASP.NET Core", "Node.js", "NestJS", "Express", "FastAPI"]
+      },
+      "database": {
+        "title": "Database",
+        "items": ["PostgreSQL", "MongoDB", "Supabase", "Redis"]
+      },
+      "devops": {
+        "title": "DevOps & Tools",
+        "items": ["Docker", "Git", "GitHub Actions", "CI/CD", "Linux"]
+      },
+      "other": {
+        "title": "Other",
+        "items": ["REST APIs", "WebSockets", "WebRTC", "OpenAI API", "RabbitMQ", "JWT", "Sentry"]
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor's in Information Systems",
+    "institution": "UFOP – Federal University of Ouro Preto",
+    "period": "2020 – 2025",
+    "extra": "Advanced English"
   },
   "technologies": {
     "title": "Technologies I work with"
   },
-  "contact": {
-    "title": "Contact",
-    "description": "Get in touch with me"
-  },
   "footer": {
     "backToTop": "Back to top",
     "instagram": "Instagram",
-    "curriculum": "Resume"
-  },
-  "buttons": {
-    "submit": "Submit",
-    "cancel": "Cancel"
+    "curriculum": "Resume",
+    "contact": "Get in Touch"
   }
 }

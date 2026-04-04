@@ -1,45 +1,122 @@
 {
-  "welcome": "Bem-vindo",
-  "description": "Este é um aplicativo internacionalizado de exemplo",
   "navigation": {
     "home": "Início",
-    "about": "Sobre Mim",
-    "technologies": "Tecnologias",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "skills": "Habilidades",
+    "projects": "Projetos",
     "contact": "Contato"
   },
   "main": {
     "title": "Mateus Andrade",
     "subtitle": "Desenvolvedor Full Stack",
-    "description": "Apaixonado por criar soluções inovadoras e transformar ideias em realidade através do código."
+    "description": "Construindo aplicações performáticas e escaláveis com React Native, ASP.NET Core e infraestrutura cloud moderna.",
+    "cta": "Veja meu trabalho"
+  },
+  "highlights": {
+    "metric1": "70%",
+    "label1": "Redução no Tempo de Resposta de LLMs",
+    "metric2": "30%",
+    "label2": "Ganho de Performance no Lighthouse",
+    "metric3": "2+",
+    "label3": "Anos de Experiência Profissional"
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Sou estudante de Sistemas de Informação na UFOP com experiência prática em desenvolvimento full stack, atuando em projetos de e-commerce no back-end, front-end e mobile. Trabalhei como freelancer e atualmente atuo em uma grande empresa, utilizando principalmente React no front-end e PHP no back-end.",
-    "description2": "Em meus projetos, atuei como Desenvolvedor Full Cycle, participando de todas as etapas — da concepção à implantação — com foco em estabilidade, performance e segurança. Trabalhei com React, React Native, Node.js, TypeScript e PostgreSQL para gerenciamento de dados. Utilizei Docker para criar ambientes de desenvolvimento padronizados, facilitar o versionamento de containers e garantir a escalabilidade das aplicações em diferentes ambientes (dev, staging e produção). Sou apaixonado por tecnologia e estou sempre em busca de aprendizado contínuo e inovação"
+    "description": "Desenvolvedor Full Stack com experiência prática em aplicações mobile e web com integrações de IA. Formado em Sistemas de Informação pela UFOP (2020–2025), me especializo em React Native, ASP.NET Core e arquiteturas cloud-native modernas.",
+    "description2": "Tenho um histórico de resultados mensuráveis: reduzi o tempo de resposta de LLMs em 70% com paralelismo assíncrono, e alcancei 30% de melhoria de performance no Lighthouse via otimização SSR. Trabalho bem em equipes ágeis e sou apaixonado por construir produtos que combinam performance, acessibilidade e ótima experiência de desenvolvimento."
+  },
+  "experience": {
+    "title": "Experiência",
+    "jobs": [
+      {
+        "role": "Desenvolvedor Full Stack (Mobile & IA)",
+        "company": "",
+        "period": "Jan 2026 – Atual",
+        "items": [
+          "Desenvolvimento de app educacional gamificado com agentes de IA por voz usando React Native + ASP.NET Core",
+          "Reduzi em 70% o tempo de resposta de LLMs com paralelismo assíncrono e streaming em C# .NET",
+          "Projetei sistema completo de gamificação com colecionáveis, progressão e customização",
+          "Implementei push notifications nativas (FCM/APNs) com agendamento para retenção de usuários",
+          "Desenvolvi APIs RESTful escaláveis com RabbitMQ/MassTransit para processamento assíncrono"
+        ]
+      },
+      {
+        "role": "Desenvolvedor Júnior",
+        "company": "Sigesis",
+        "period": "Mai 2025 – Jan 2026",
+        "items": [
+          "Liderei o front-end do Portal da Prefeitura com SSR, Dynamic Routing e Revalidation em Next.js",
+          "Alcancei 30% de melhoria no Lighthouse com otimizações de SSR e SEO",
+          "Construí design system acessível com componentes reutilizáveis seguindo diretrizes WCAG"
+        ]
+      },
+      {
+        "role": "Estagiário Full Stack",
+        "company": "MT Soluções",
+        "period": "Out 2023 – Jan 2025",
+        "items": [
+          "Implementei fluxo completo de e-commerce: carrinho, checkout e autenticação JWT",
+          "Desenvolvi APIs RESTful com Node.js/Express e modelagem de banco de dados em PostgreSQL"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "items": [
+      {
+        "name": "Woolly",
+        "tagline": "Plataforma Educacional com IA por Voz",
+        "year": "2026",
+        "description": "App educacional gamificado com agentes de IA por voz para aprendizado interativo em tempo real. Backend com mensageria assíncrona, push notifications e pipeline de processamento de voz (AssemblyAI STT, Google TTS, OpenAI LLM). PostgreSQL via Supabase com Row Level Security.",
+        "tech": ["React Native", "Expo", "ASP.NET Core", "FastAPI", "PostgreSQL", "Docker", "WebRTC", "OpenAI"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades & Tecnologias",
+    "categories": {
+      "languages": {
+        "title": "Linguagens",
+        "items": ["TypeScript", "JavaScript", "C#", "Python", "PHP", "SQL"]
+      },
+      "frontend": {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "React Native (Expo)", "HTML5", "CSS3", "Tailwind CSS"]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": ["ASP.NET Core", "Node.js", "NestJS", "Express", "FastAPI"]
+      },
+      "database": {
+        "title": "Banco de Dados",
+        "items": ["PostgreSQL", "MongoDB", "Supabase", "Redis"]
+      },
+      "devops": {
+        "title": "DevOps & Ferramentas",
+        "items": ["Docker", "Git", "GitHub Actions", "CI/CD", "Linux"]
+      },
+      "other": {
+        "title": "Outros",
+        "items": ["REST APIs", "WebSockets", "WebRTC", "OpenAI API", "RabbitMQ", "JWT", "Sentry"]
+      }
+    }
+  },
+  "education": {
+    "title": "Formação",
+    "degree": "Bacharelado em Sistemas de Informação",
+    "institution": "UFOP – Universidade Federal de Ouro Preto",
+    "period": "2020 – 2025",
+    "extra": "Inglês Avançado"
   },
   "technologies": {
-    "title": "Tecnologias que utilizo",
-    "JavaScript": "JavaScript",
-    "TypeScript": "TypeScript",
-    "Python": "Python",
-    "PHP": "PHP",
-    "Docker": "Docker",
-    "Node.js": "Node.js",
-    "React": "React",
-    "Java": "Java",
-    "React Native": "React Native"
-  },
-  "contact": {
-    "title": "Contato",
-    "description": "Entre em contato comigo"
+    "title": "Tecnologias que utilizo"
   },
   "footer": {
     "backToTop": "Voltar ao topo",
     "instagram": "Instagram",
-    "curriculum": "Currículo"
-  },
-  "buttons": {
-    "submit": "Enviar",
-    "cancel": "Cancelar"
+    "curriculum": "Currículo",
+    "contact": "Entre em Contato"
   }
 }
