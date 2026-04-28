@@ -3,74 +3,190 @@
     "home": "Início",
     "about": "Sobre",
     "experience": "Experiência",
+    "cases": "Cases",
     "skills": "Habilidades",
     "projects": "Projetos",
     "contact": "Contato"
   },
   "main": {
+    "available": "Disponível para novas oportunidades",
     "title": "Mateus Andrade",
-    "subtitle": "Desenvolvedor Full Stack",
-    "description": "Construindo aplicações performáticas e escaláveis com React Native, ASP.NET Core e infraestrutura cloud moderna.",
-    "cta": "Veja meu trabalho"
+    "subtitle": "Full Stack Developer",
+    "specialties": ["Mobile", "Backend", "IA em Tempo Real"],
+    "description": "Desenvolvedor Full Stack pleno construindo features end-to-end em sistemas distribuídos — de apps React Native a backends ASP.NET Core orientados a eventos, com integrações de IA por voz em tempo real.",
+    "cta": "Ver meu trabalho",
+    "ctaResume": "Baixar currículo",
+    "location": "Brasil · Português & Inglês fluente"
   },
   "highlights": {
     "metric1": "70%",
-    "label1": "Redução no Tempo de Resposta de LLMs",
-    "metric2": "30%",
-    "label2": "Ganho de Performance no Lighthouse",
-    "metric3": "2+",
-    "label3": "Anos de Experiência Profissional"
+    "label1": "Redução de latência em geração via IA",
+    "metric2": "3×",
+    "label2": "Throughput de envio de notificações",
+    "metric3": "99",
+    "label3": "Testes automatizados em produção",
+    "metric4": "2+",
+    "label4": "Anos de experiência profissional"
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Desenvolvedor Full Stack com experiência prática em aplicações mobile e web com integrações de IA. Formado em Sistemas de Informação pela UFOP (2020–2025), me especializo em React Native, ASP.NET Core e arquiteturas cloud-native modernas.",
-    "description2": "Tenho um histórico de resultados mensuráveis: reduzi o tempo de resposta de LLMs em 70% com paralelismo assíncrono, e alcancei 30% de melhoria de performance no Lighthouse via otimização SSR. Trabalho bem em equipes ágeis e sou apaixonado por construir produtos que combinam performance, acessibilidade e ótima experiência de desenvolvimento."
+    "description": "Sou Mateus, desenvolvedor Full Stack pleno com experiência projetando e implementando features complexas end-to-end — mobile, backend e dashboard — em sistemas distribuídos. Bacharel em Sistemas de Informação pela UFOP (2020–2025), atuo no Woolly, plataforma educacional gamificada com tutores de IA por voz em tempo real.",
+    "description2": "Meu foco está em arquitetura orientada a eventos, microsserviços, performance e integrações com IA em tempo real. Tenho histórico comprovado de impacto: paralelizei chamadas à OpenAI reduzindo a latência de geração de quizzes em 70%, projetei um sistema de push notifications multi-plataforma com 99 testes automatizados e 3× de throughput, e desenvolvi pipelines event-driven idempotentes com RabbitMQ + MassTransit.",
+    "description3": "Trabalho bem com C#, TypeScript, Python e SQL, e gosto de problemas que exigem decisões de design — concorrência, idempotência, multi-tenancy com RLS, observabilidade. Tenho prática em colaboração ágil, code review e mentoring informal."
   },
   "experience": {
     "title": "Experiência",
     "jobs": [
       {
-        "role": "Desenvolvedor Full Stack (Mobile & IA)",
-        "company": "",
+        "role": "Desenvolvedor Full Stack (Mobile, Backend & IA)",
+        "company": "Woolly",
         "period": "Jan 2026 – Atual",
+        "summary": "Plataforma educacional gamificada com tutores de IA por voz em tempo real. Atuação end-to-end em mobile, backend distribuído, jobs em VPS próprio, dashboard admin e infra.",
         "items": [
-          "Desenvolvimento de app educacional gamificado com agentes de IA por voz usando React Native + ASP.NET Core",
-          "Reduzi em 70% o tempo de resposta de LLMs com paralelismo assíncrono e streaming em C# .NET",
-          "Projetei sistema completo de gamificação com colecionáveis, progressão e customização",
-          "Implementei push notifications nativas (FCM/APNs) com agendamento para retenção de usuários",
-          "Desenvolvi APIs RESTful escaláveis com RabbitMQ/MassTransit para processamento assíncrono"
+          "Arquiteto e desenvolvo o app mobile em React Native/Expo, o backend em ASP.NET Core e o servidor dedicado de jobs com Hangfire em VPS Linux com Docker, Caddy e Ansible",
+          "Reduzi em 70% o tempo de geração de quizzes por IA (22s → 7s) paralelizando chamadas à OpenAI com Task.WhenAll e backoff progressivo no polling",
+          "Projetei a arquitetura event-driven da gamificação com RabbitMQ + MassTransit, consumers idempotentes via Event Store e at-least-once delivery",
+          "Construí sistema de push notifications iOS/Android com 4 jobs Hangfire segmentados por horário, envio paralelo de batches via SemaphoreSlim (3× throughput) e 99 testes automatizados",
+          "Integrei pipeline de voz em tempo real (WebRTC + LiveKit + AssemblyAI STT + OpenAI + Google TTS) com continuação contextual entre conversas",
+          "Modelei banco PostgreSQL multi-tenant com Row Level Security em 9+ tabelas, 57 migrations Sqitch versionadas e índices parciais únicos"
         ]
       },
       {
         "role": "Desenvolvedor Júnior",
         "company": "Sigesis",
         "period": "Mai 2025 – Jan 2026",
+        "summary": "Front-end do Portal da Prefeitura usando Next.js (SSR, Dynamic Routing, Revalidation).",
         "items": [
-          "Liderei o front-end do Portal da Prefeitura com SSR, Dynamic Routing e Revalidation em Next.js",
-          "Alcancei 30% de melhoria no Lighthouse com otimizações de SSR e SEO",
-          "Construí design system acessível com componentes reutilizáveis seguindo diretrizes WCAG"
+          "Liderei o front-end do Portal da Prefeitura em Next.js, atingindo +30% de performance no Lighthouse",
+          "Construí design system com componentes reutilizáveis seguindo WCAG e SEO técnico otimizado",
+          "Integrei APIs REST e padronizei revalidation/SSR para conteúdos críticos"
         ]
       },
       {
         "role": "Estagiário Full Stack",
         "company": "MT Soluções",
         "period": "Out 2023 – Jan 2025",
+        "summary": "Implementação de fluxos completos de e-commerce e APIs RESTful.",
         "items": [
-          "Implementei fluxo completo de e-commerce: carrinho, checkout e autenticação JWT",
-          "Desenvolvi APIs RESTful com Node.js/Express e modelagem de banco de dados em PostgreSQL"
+          "Implementei carrinho, checkout e autenticação JWT integrados a APIs de pagamento",
+          "Desenvolvi APIs RESTful em Node.js/Express com modelagem PostgreSQL aplicando Clean Code"
         ]
       }
     ]
   },
+  "cases": {
+    "title": "Cases Técnicos em Destaque",
+    "subtitle": "Decisões de design e impacto mensurável em produção",
+    "labels": {
+      "problem": "Problema",
+      "solution": "Solução",
+      "impact": "Impacto",
+      "stack": "Stack"
+    },
+    "items": [
+      {
+        "name": "Otimização de Geração de Quizzes via IA",
+        "tagline": "Latência de 22s para 7s paralelizando chamadas à OpenAI",
+        "problem": "A geração de quizzes via OpenAI demorava ~22s para 5 perguntas porque o modelo produzia token a token um JSON gigante com todas as alternativas e justificativas. Combinado com polling fixo de 2s e animações forçando espera mínima, a UX sofria.",
+        "solution": [
+          "Método ComputeBatches divide N perguntas em lotes de 2-3 (ex: 5→[3,2], 15→[3,3,3,3,3])",
+          "Task.WhenAll dispara chamadas paralelas com prompts enxutos e mescla resultados re-numerando IDs",
+          "Polling com backoff progressivo (1s → 5s, capado) substitui intervalo fixo de 2s",
+          "Tempo mínimo de animações alinhado ao novo tempo de geração paralela"
+        ],
+        "impact": [
+          "5 perguntas: 22s → 7-8s (-70%)",
+          "10 perguntas: 40s → 8-10s (-75%)",
+          "15 perguntas: 60s → 10-12s (-80%)",
+          "Requests de polling: ~11 → ~4-5 (-60%)"
+        ],
+        "stack": ["C#", "ASP.NET Core", "OpenAI API", "Task.WhenAll", "React Native", "TanStack Query"]
+      },
+      {
+        "name": "Sistema Distribuído de Push Notifications",
+        "tagline": "iOS + Android, segmentado por horário, 3× throughput, 99 testes",
+        "problem": "Enviar push 1 a 1 para milhares de usuários estoura rate limits da Expo. Tokens expirados acumulam silenciosamente, lembretes no horário errado têm baixa conversão e operações em produção exigem visibilidade e ação manual.",
+        "solution": [
+          "Servidor Hangfire dedicado em VPS próprio com Docker, Caddy/HTTPS e basic auth",
+          "5 recurring jobs e 1 delayed job: pendentes (FOR UPDATE SKIP LOCKED), streak warning, inactivity warning, lembretes diários (4 horários BRT), checagem de receipts",
+          "Envio paralelo de batches via SemaphoreSlim(3) + ConcurrentBag para coleta thread-safe",
+          "Batch deactivation de tokens inválidos via ExecuteUpdateAsync em uma única query",
+          "Soft pre-prompt para Apple Review, templates com placeholders e rate limiting por usuário"
+        ],
+        "impact": [
+          "3× throughput no envio de batches",
+          "99 testes automatizados em 3 projetos (Testcontainers + xUnit + Moq)",
+          "Lembretes segmentados por preferência do usuário (4 janelas)",
+          "Tokens inválidos desativados automaticamente em batch"
+        ],
+        "stack": ["C#", "Hangfire", "PostgreSQL", "Expo Push API", "FCM", "APNs", "Docker", "Caddy", "Ansible", "Infisical"]
+      },
+      {
+        "name": "Arquitetura Event-Driven para Gamificação",
+        "tagline": "RabbitMQ + MassTransit com consumers idempotentes e Event Store",
+        "problem": "Múltiplos sistemas reagem ao mesmo evento (subir de nível dispara missões, colecionáveis, tela de desbloqueio, push). Acoplar tudo no XpService criaria um Deus Service difícil de testar e propenso a falhas em cascata.",
+        "solution": [
+          "Eventos imutáveis: AlunoSubiuDeNivel, AlunoPromovido, RankingFinalizado, StreakMilestoneAtingido",
+          "Consumers em Modules/Gamificacao registram no EventStore antes de processar (idempotência via eventId composto)",
+          "At-least-once delivery + retry automático + falhas em publicação não abortam transação principal",
+          "Pulos múltiplos de nível processam níveis intermediários sem perder recompensas"
+        ],
+        "impact": [
+          "Desacoplamento total entre XP, ranking, colecionáveis, missões e streaks",
+          "Idempotência garantida em re-entregas",
+          "Resiliência: falhas isoladas não cascateiam",
+          "Auditoria completa via Event Store customizado"
+        ],
+        "stack": ["C#", "RabbitMQ", "MassTransit", "EF Core", "PostgreSQL", "EventStore pattern"]
+      },
+      {
+        "name": "Pipeline de Voz em Tempo Real com IA",
+        "tagline": "WebRTC + LiveKit + STT/LLM/TTS com continuação contextual",
+        "problem": "Conversa por voz com IA precisa ser sub-segundo end-to-end. Retomar uma conversa antiga sem contexto frustra o aluno, mas mandar a transcrição inteira em toda chamada é caro e lento.",
+        "solution": [
+          "LiveKit SDK em React Native conecta ao pipeline AssemblyAI (STT) → OpenAI → Google TTS",
+          "ContinuationContextBuilder trunca transcrição (últimos 8 turnos, 400 chars/msg) sob demanda",
+          "Extrai pontos positivos, melhorias e dica do feedback estruturado da sessão anterior",
+          "Detecta progressão de nível e busca memória do aluno por matéria",
+          "Cache compartilhado via TanStack Query entre Dialog, tela de chamada, histórico e feedback"
+        ],
+        "impact": [
+          "Conversa de baixa latência com contexto da sessão anterior",
+          "Histórico agrupado por assunto (case-insensitive)",
+          "Feedback estruturado reaproveitado sem custo extra de prompt",
+          "Hook centralizado para fetch + tratamento de 404 e erros de rede"
+        ],
+        "stack": ["React Native", "WebRTC", "LiveKit", "AssemblyAI", "OpenAI", "Google TTS", "ASP.NET Core"]
+      }
+    ]
+  },
   "projects": {
-    "title": "Projetos em Destaque",
+    "title": "Produtos & Projetos",
     "items": [
       {
         "name": "Woolly",
-        "tagline": "Plataforma Educacional com IA por Voz",
+        "tagline": "Plataforma educacional gamificada com tutores de IA por voz",
         "year": "2026",
-        "description": "App educacional gamificado com agentes de IA por voz para aprendizado interativo em tempo real. Backend com mensageria assíncrona, push notifications e pipeline de processamento de voz (AssemblyAI STT, Google TTS, OpenAI LLM). PostgreSQL via Supabase com Row Level Security.",
-        "tech": ["React Native", "Expo", "ASP.NET Core", "FastAPI", "PostgreSQL", "Docker", "WebRTC", "OpenAI"]
+        "description": "App educacional onde estudantes conversam por voz, em tempo real, com agentes de IA personalizados. Combina pedagogia, gamificação (níveis, ranking semanal, missões, colecionáveis, streaks) e tecnologia conversacional avançada (WebRTC, STT→LLM→TTS) para criar experiências de aprendizagem imersivas.",
+        "highlights": [
+          "App mobile em React Native/Expo",
+          "Backend distribuído ASP.NET Core + servidor dedicado de jobs (Hangfire)",
+          "Dashboard admin React + multi-tenancy com Row Level Security",
+          "Infra própria: Docker, Caddy, Ansible, Infisical"
+        ],
+        "tech": ["React Native", "Expo", "ASP.NET Core", "PostgreSQL", "RabbitMQ", "Hangfire", "Docker", "WebRTC", "OpenAI"]
+      },
+      {
+        "name": "Portal da Prefeitura — Sigesis",
+        "tagline": "Front-end SSR otimizado com +30% no Lighthouse",
+        "year": "2025",
+        "description": "Liderança do front-end do Portal da Prefeitura usando Next.js com SSR, Dynamic Routing e Revalidation. Construção de design system reutilizável seguindo WCAG e SEO técnico otimizado.",
+        "highlights": [
+          "+30% de performance no Lighthouse",
+          "Design system com componentes acessíveis (WCAG)",
+          "Integração com APIs REST e revalidation estratégica"
+        ],
+        "tech": ["Next.js", "React", "TypeScript", "Node.js", "PHP", "HTML", "CSS"]
       }
     ]
   },
@@ -82,33 +198,47 @@
         "items": ["TypeScript", "JavaScript", "C#", "Python", "PHP", "SQL"]
       },
       "frontend": {
-        "title": "Frontend",
-        "items": ["React", "Next.js", "React Native (Expo)", "HTML5", "CSS3", "Tailwind CSS"]
+        "title": "Frontend & Mobile",
+        "items": ["React", "Next.js", "React Native (Expo)", "Zustand", "TanStack Query", "Tailwind CSS", "MMKV"]
       },
       "backend": {
         "title": "Backend",
-        "items": ["ASP.NET Core", "Node.js", "NestJS", "Express", "FastAPI"]
+        "items": ["ASP.NET Core", "EF Core", "Node.js", "NestJS", "Express", "FastAPI"]
       },
       "database": {
         "title": "Banco de Dados",
-        "items": ["PostgreSQL", "MongoDB", "Supabase", "Redis"]
+        "items": ["PostgreSQL", "Supabase (RLS)", "MongoDB", "Redis"]
+      },
+      "messaging": {
+        "title": "Mensageria & Jobs",
+        "items": ["RabbitMQ", "MassTransit", "Hangfire", "Background Services .NET"]
+      },
+      "ai": {
+        "title": "IA & Tempo Real",
+        "items": ["OpenAI API", "WebRTC", "LiveKit", "ElevenLabs", "AssemblyAI", "Google TTS"]
       },
       "devops": {
-        "title": "DevOps & Ferramentas",
-        "items": ["Docker", "Git", "GitHub Actions", "CI/CD", "Linux"]
+        "title": "DevOps & Infra",
+        "items": ["Docker", "Caddy", "GitHub Actions", "CI/CD", "Linux", "Sentry", "Ansible", "Infisical"]
       },
-      "other": {
-        "title": "Outros",
-        "items": ["REST APIs", "WebSockets", "WebRTC", "OpenAI API", "RabbitMQ", "JWT", "Sentry"]
+      "architecture": {
+        "title": "Arquitetura & Testes",
+        "items": ["Clean Architecture", "Event-Driven", "Microsserviços", "Repository Pattern", "xUnit", "Testcontainers", "Jest", "Sqitch"]
       }
     }
   },
   "education": {
-    "title": "Formação",
+    "title": "Formação & Certificações",
+    "certificationsTitle": "Certificações",
     "degree": "Bacharelado em Sistemas de Informação",
     "institution": "UFOP – Universidade Federal de Ouro Preto",
     "period": "2020 – 2025",
-    "extra": "Inglês Avançado"
+    "languages": "Português (nativo) · Inglês (fluente)",
+    "certifications": [
+      "Docker and Kubernetes: The Complete Guide — Udemy (2024)",
+      "The Complete React Native + Hooks Course — Udemy (2024)",
+      "Node.js, Express, MongoDB & More: The Complete Bootcamp — Udemy (2023)"
+    ]
   },
   "technologies": {
     "title": "Tecnologias que utilizo"
@@ -117,6 +247,7 @@
     "backToTop": "Voltar ao topo",
     "instagram": "Instagram",
     "curriculum": "Currículo",
-    "contact": "Entre em Contato"
+    "contact": "Entre em Contato",
+    "tagline": "Aberto a oportunidades remotas e híbridas no Brasil ou exterior."
   }
 }
