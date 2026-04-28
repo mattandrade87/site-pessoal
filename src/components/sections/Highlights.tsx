@@ -7,19 +7,20 @@ const Highlights = () => {
     { value: t("highlights.metric1"), label: t("highlights.label1") },
     { value: t("highlights.metric2"), label: t("highlights.label2") },
     { value: t("highlights.metric3"), label: t("highlights.label3") },
+    { value: t("highlights.metric4"), label: t("highlights.label4") },
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-14 max-w-3xl">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-10 sm:mt-14 max-w-4xl">
       {metrics.map((metric, index) => (
         <div
           key={index}
-          className="border border-secondary/20 bg-black/30 backdrop-blur-sm rounded-lg p-5 text-center"
+          className="group border border-secondary/20 bg-black/30 backdrop-blur-sm rounded-lg p-4 sm:p-5 text-center transition-all duration-300 hover:border-secondary/60 hover:-translate-y-0.5"
         >
-          <p className="text-3xl sm:text-4xl font-heading font-bold text-secondary">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-secondary">
             {metric.value}
           </p>
-          <p className="text-xs sm:text-sm text-primary/70 mt-1 font-body">
+          <p className="text-[11px] sm:text-xs md:text-sm text-primary/70 mt-1 font-body leading-snug">
             {metric.label}
           </p>
         </div>
