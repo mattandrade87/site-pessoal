@@ -27,9 +27,12 @@ const Footer: React.FC = () => {
       className="w-full bg-black/50 backdrop-blur-sm py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-15"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-secondary font-heading text-center mb-10 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-secondary font-heading text-center mb-3">
           {t("footer.contact")}
         </h2>
+        <p className="text-center text-primary/60 font-body text-sm sm:text-base mb-10 sm:mb-12">
+          {t("footer.tagline")}
+        </p>
 
         <div className="flex flex-col items-start gap-4 sm:gap-5 mb-8 sm:mb-12">
           <a

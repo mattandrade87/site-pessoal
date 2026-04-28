@@ -19,6 +19,7 @@ const Header: React.FC = () => {
     { label: t("navigation.home"), id: "inicio", offset: 80 },
     { label: t("navigation.about"), id: "sobre-mim", offset: 80 },
     { label: t("navigation.experience"), id: "experiencia", offset: 80 },
+    { label: t("navigation.cases"), id: "cases", offset: 80 },
     { label: t("navigation.skills"), id: "habilidades", offset: 80 },
     { label: t("navigation.projects"), id: "projetos", offset: 80 },
     { label: t("navigation.contact"), id: "contato", offset: 80 },

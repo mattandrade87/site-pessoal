@@ -4,6 +4,7 @@ import { LanguageSwitcher } from "./components/layout/LanguageSwitcher";
 import MainSection from "./components/sections/MainSection";
 import About from "./components/sections/About";
 import Experience from "./components/sections/Experience";
+import Cases from "./components/sections/Cases";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import Education from "./components/sections/Education";
@@ -19,14 +20,19 @@ function App() {
         <LanguageSwitcher />
       </div>
       <MainSection />
-      <AnimatedBackground />
-      <About />
-      <Experience />
-      <Skills />
-      <TechStackCarousel />
-      <Projects />
-      <Education />
-      <Footer />
+      <div className="-mt-120 relative z-0">
+        <AnimatedBackground />
+      </div>
+      <div className="relative z-10 -mt-52">
+        <About />
+        <TechStackCarousel />
+        <Experience />
+        <Cases />
+        <Skills />
+        <Projects />
+        <Education />
+        <Footer />
+      </div>
     </div>
   );
 }
