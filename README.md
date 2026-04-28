@@ -1,97 +1,67 @@
-# Mateus Andrade - Personal Website
+# Mateus Andrade — Site Pessoal
 
-Este é meu site pessoal desenvolvido com React, TypeScript e Vite, apresentando uma interface moderna e interativa para mostrar minhas habilidades e experiências como desenvolvedor.
+Site pessoal e portfólio desenvolvido em React + TypeScript + Vite, com foco em apresentar de forma clara, bonita e técnica meu trabalho como Full Stack Developer (mobile, backend e IA em tempo real).
 
-## 🚀 Tecnologias Utilizadas
+## Stack
 
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- Font Awesome
-- Simplex Noise (para animações)
+- **React 19** + **TypeScript**
+- **Vite 6** (build e dev server)
+- **Tailwind CSS 4**
+- **react-i18next** (PT-BR / EN com detecção automática)
+- **Font Awesome** + **react-icons** (Si / Ri)
+- **Simplex Noise** (background animado)
+- **gh-pages** (deploy)
 
-## ✨ Características
+## Estrutura do site
 
-### Design Moderno e Responsivo
+| Seção             | Componente                                | O que mostra |
+|-------------------|-------------------------------------------|--------------|
+| Hero              | `sections/MainSection.tsx`                | Badge de disponibilidade, pílulas de especialidade, descrição, CTA + download de currículo |
+| Highlights        | `sections/Highlights.tsx`                 | 4 métricas-chave de impacto (latência IA, throughput de push, testes, anos de experiência) |
+| Sobre             | `sections/About.tsx`                      | Posicionamento Full Stack pleno e foco técnico |
+| Tech Carousel     | `ui/TechStackCarousel.tsx`                | 28+ tecnologias em carrossel infinito com fade nas bordas |
+| Experiência       | `sections/Experience.tsx`                 | Timeline com summary, bullets ricos e gradiente |
+| **Cases técnicos**| `sections/Cases.tsx`                      | Acordeão com 4 cases (Problema · Solução · Impacto · Stack) |
+| Habilidades       | `sections/Skills.tsx`                     | 8 categorias (linguagens, front, back, DB, mensageria, IA, DevOps, arquitetura) |
+| Projetos          | `sections/Projects.tsx`                   | Grid de produtos (Woolly + Portal Sigesis) com highlights |
+| Formação          | `sections/Education.tsx`                  | Diploma, idiomas e certificações |
+| Footer            | `layout/Footer.tsx`                       | Contatos, redes, download de currículo, voltar ao topo |
+| Header            | `layout/Header.tsx`                       | Nav fixo com smooth scroll, links sociais e menu mobile |
+| Switcher          | `layout/LanguageSwitcher.tsx`             | Alternância PT-BR / EN |
 
-- Interface limpa e profissional
-- Totalmente responsivo para todos os dispositivos
-- Animações suaves e interativas
-- Tema escuro com elementos visuais dinâmicos
+A ordem das seções é definida em [src/App.tsx](src/App.tsx).
 
-### Componentes Principais
+## Internacionalização
 
-#### Header
+As strings ficam em [src/locales/pt/translation.json](src/locales/pt/translation.json) e [src/locales/en/translation.json](src/locales/en/translation.json). A configuração do i18next está em [src/i18n.ts](src/i18n.ts).
 
-- Navegação fixa com links para todas as seções
-- Integração com redes sociais (LinkedIn e GitHub)
-- Efeito de transparência e sombra ao rolar
-- Navegação suave com scroll automático
+## Conteúdo canônico
 
-#### Animated Background
+O arquivo [portfolio-features.md](portfolio-features.md) é a fonte de verdade do conteúdo (identidade, stack, features). Sempre que precisar atualizar uma feature, edite primeiro lá e depois reflita nas traduções.
 
-- Animação de partículas usando Simplex Noise
-- Efeito de ondas dinâmicas
-- Cobertura total da viewport
-- Performance otimizada
-
-#### Tech Stack Carousel
-
-- Carrossel infinito de tecnologias
-- Ícones coloridos com efeitos hover
-- Animações suaves
-- Layout responsivo
-
-#### Footer
-
-- Informações de contato organizadas
-- Links para email e telefone
-- Integração com Instagram
-- Botão "Voltar ao topo" com animação
-
-## 🛠️ Configuração do Ambiente
-
-1. Clone o repositório:
+## Scripts
 
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
+npm install        # instala dependências
+npm run dev        # ambiente de desenvolvimento (http://localhost:5173)
+npm run build      # tsc + vite build em dist/
+npm run preview    # serve o build local
+npm run lint       # ESLint
+npm run deploy     # gh-pages -d dist
 ```
 
-2. Instale as dependências:
+## Tema
 
-```bash
-npm install
-```
+Variáveis de tema definidas em [src/index.css](src/index.css):
 
-3. Execute o projeto em modo de desenvolvimento:
+- `--color-primary` (texto primário)
+- `--color-secondary` (acento dourado)
+- `--color-background` (fundo preto)
+- `--color-background-animation` (partículas)
+- `--font-heading` / `--font-body`
 
-```bash
-npm run dev
-```
+## Contato
 
-4. Para build de produção:
-
-```bash
-npm run build
-```
-
-## 📱 Contato
-
-- Email: mateus.vitor.andrade@gmail.com
-- Telefone: +55 (31) 98603-9374
-- LinkedIn: [mateus-andrade-dev](https://www.linkedin.com/in/mateus-andrade-dev/)
-- GitHub: [mattandrade87](https://github.com/mattandrade87)
-- Instagram: [@matt.andrade87](https://www.instagram.com/matt.andrade87/)
-
-## 🎨 Personalização
-
-O projeto utiliza variáveis CSS personalizadas para cores e estilos, que podem ser facilmente modificadas no arquivo de estilos global. As principais variáveis incluem:
-
-- `--color-background-animation`: Cor das partículas animadas
-- `--color-primary`: Cor principal do tema
-- `--color-secondary`: Cor secundária do tema
-
-## 📝 Licença
-
-Este projeto é pessoal e não está disponível para uso comercial sem autorização expressa.
+- **Email**: mateus.vitor.andrade@gmail.com
+- **LinkedIn**: [mateus-andrade-dev](https://www.linkedin.com/in/mateus-andrade-dev/)
+- **GitHub**: [mattandrade87](https://github.com/mattandrade87)
