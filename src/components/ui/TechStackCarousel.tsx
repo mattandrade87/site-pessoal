@@ -128,17 +128,17 @@ const TechStackCarousel: React.FC = () => {
   return (
     <section
       id="tecnologias"
-      className="w-full py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-15 overflow-hidden"
+      className="w-full py-12 sm:py-16 overflow-hidden"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary mb-6 sm:mb-8 text-center font-heading">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary mb-6 sm:mb-8 text-center font-heading px-4 sm:px-6 md:px-8 lg:px-15">
         {t("technologies.title")}
       </h2>
 
       <div className="relative">
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 sm:w-24 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 sm:w-24 bg-gradient-to-l from-background to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16 sm:w-28 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16 sm:w-28 bg-gradient-to-l from-background to-transparent" />
 
         <div
           ref={trackRef}

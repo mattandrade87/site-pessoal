@@ -35,10 +35,6 @@ A ordem das seções é definida em [src/App.tsx](src/App.tsx).
 
 As strings ficam em [src/locales/pt/translation.json](src/locales/pt/translation.json) e [src/locales/en/translation.json](src/locales/en/translation.json). A configuração do i18next está em [src/i18n.ts](src/i18n.ts).
 
-## Conteúdo canônico
-
-O arquivo [portfolio-features.md](portfolio-features.md) é a fonte de verdade do conteúdo (identidade, stack, features). Sempre que precisar atualizar uma feature, edite primeiro lá e depois reflita nas traduções.
-
 ## Scripts
 
 ```bash

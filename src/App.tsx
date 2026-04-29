@@ -23,7 +23,7 @@ function App() {
       <div className="-mt-120 relative z-0">
         <AnimatedBackground />
       </div>
-      <div className="relative z-10 -mt-52">
+      <div className="relative z-10 lg:-mt-52">
         <About />
         <TechStackCarousel />
         <Experience />
